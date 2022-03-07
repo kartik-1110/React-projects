@@ -1,48 +1,45 @@
 import React, { useState, useContext } from "react";
+import sublinks from "./data";
 
-// setting up useContext
 const AppContext = React.createContext();
 
-const AppProvider = ({ children }) => {
+export const AppProvider = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
+  const [location, setLocation] = useState({});
 
-  // function to open sidebar
+  // function for opening /closing sidebar
   const openSidebar = () => {
     setIsSidebarOpen(true);
   };
-  // function to close sidebar
   const closeSidebar = () => {
     setIsSidebarOpen(false);
   };
-  // function to open modal
-  const openModal = () => {
-    setIsModalOpen(true);
+  const openSubmenu = (text, coordinates) => {
+    setLocation(coordinates);
+    setIsSubmenuOpen(true);
   };
-  // function to close modal
-  const closeModal = () => {
-    setIsModalOpen(false);
+  const closeSubmenu = () => {
+    setIsSubmenuOpen(false);
   };
 
   return (
     <AppContext.Provider
-      value={{
-        isModalOpen,
+      value={
+        (isSubmenuOpen,
         isSidebarOpen,
-        openModal,
+        openSubmenu,
         openSidebar,
-        closeModal,
+        closeSubmenu,
         closeSidebar,
-      }}
+        location)
+      }
     >
       {children}
     </AppContext.Provider>
   );
 };
 
-// custom hook
 export const useGlobalContext = () => {
   return useContext(AppContext);
 };
-
-export { AppContext, AppProvider };
