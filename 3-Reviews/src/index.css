@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  background: rgba(211, 211, 211, 0.527);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+.container {
+  width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  max-width: 600px;
+}
+.title {
+  text-align: center;
+  font-size: 25px;
+}
+.review {
+  margin-top: 2rem;
+  background-color: whitesmoke;
+  border-radius: 15px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0px 10px 10px 0px lightgrey;
+  /* cursor: pointer; */
+}
+.review:hover {
+  box-shadow: 0px 20px 20px 0px darkgrey;
+}
+.img-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+}
+/* setting up the image with quote icon on top  */
+.person-img {
+  width: 100%;
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+}
+.quote-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(25%);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background-color: orangered;
+  color: white;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+/* this for the button section at bottom */
+.button-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+}
+.prev-btn {
+  border-color: transparent;
+  background: transparent;
+  color: orangered;
+  cursor: pointer;
+  padding-top: 5px;
+}
+.prev-btn:hover {
+  color: rgb(136, 36, 0);
+}
+.next-btn {
+  border-color: transparent;
+  background: transparent;
+  color: orangered;
+  cursor: pointer;
+  padding-top: 5px;
+}
+.next-btn:hover {
+  color: rgb(136, 36, 0);
+}
+.random-btn {
+  background-color: transparent;
+  color: orangered;
+  border-color: transparent;
+  font-weight: 600;
+  font-size: 15px;
+  margin-top: 20px;
+  background-color: rgba(255, 68, 0, 0.205);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.random-btn:hover {
+  color: rgb(136, 36, 0);
+}
+.author {
+  margin-bottom: 1.5rem;
+  font-size: 30px;
+}
+.job {
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  color: orangered;
+}
+.info {
+  font-weight: 400;
+}
